@@ -22,7 +22,7 @@ var options = {
 const checkTime=(req,res,next)=>{
     const thisDay = date.getDay();
     const thisHour = date.getHours();
-    if(!(thisDay > 0 && thisDay <6 && thisHour>9 && thisHour<17)){
+    if((thisDay > 0 && thisDay <6 && thisHour>9 && thisHour<17)){
         console.log("You are on work hours!");
         next()
     }
